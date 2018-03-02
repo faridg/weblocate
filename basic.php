@@ -44,20 +44,20 @@ require_once("tools.php");
       </div>
 </nav>
 <div class="container">
-<table width='100%'>
-<tr>
-<td width='45%' align='right'>Your address:</td><td width='55%' align='left'><b><?php echo "$ip"; ?></b>
-</td>
-</tr>
-<tr>
-<td align='right'>Country:</td><td align='left'><img src="img/flags/<?php echo "$flag" ?>" width="18" height="12"/> <b><?php echo "$country_name"; ?> </b>
-</td>
-</tr>
-<tr>
-<td align='right'>City:</td><td align='left'><b><?php echo "$city"; ?></b>
-</td>
-</tr>
-</table>
+	<table width='100%'>
+		<tr>
+			<td width='45%' align='right'>Your address:</td><td width='55%' align='left'><b><?php echo "$ip"; ?></b>
+		</td>
+		</tr>
+		<tr>
+			<td align='right'>Country:</td><td align='left'><img src="img/flags/<?php echo "$flag" ?>" width="18" height="12"/> <b><?php echo "$country_name"; ?> </b>
+		</td>
+		</tr>
+		<tr>
+			<td align='right'>City:</td><td align='left'><b><?php echo "$city"; ?></b>
+			</td>
+		</tr>
+	</table>
 </div>
 </body>
 </html>
