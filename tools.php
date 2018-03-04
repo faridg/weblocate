@@ -1,12 +1,12 @@
 <?php
 
 if (isset($_REQUEST['lang'])) {
-$l = $_REQUEST['lang'];
-include "lang/".$l.".php";
+	$l = $_REQUEST['lang'];
+	include "lang/".$l.".php";
 }
 else {
-$l = "English";	
-include "lang/".$l.".php";
+	$l = "English";	
+	include "lang/".$l.".php";
 }
 require_once("inc/geoipcity.inc");
 require_once("inc/geoipregionvars.php");
@@ -15,10 +15,10 @@ require_once("inc/functions.php");
 $gi = geoip_open("inc/GeoLiteCity.dat",GEOIP_STANDARD);
 
 if (isset($_REQUEST['ip'])) {
-$ip = getAddrByHost($_REQUEST['ip'], $timeout = 3);
+	$ip = getAddrByHost($_REQUEST['ip'], $timeout = 3);
 }
 else {
-$ip = $_SERVER['REMOTE_ADDR'];	
+	$ip = $_SERVER['REMOTE_ADDR'];	
 }
 $hostname = @gethostbyaddr($ip);
 $record = geoip_record_by_addr($gi,"$ip");
@@ -54,8 +54,6 @@ if ($org == "") { $org = $lang['country_na'];}
 if ($isp == "") { $isp = $lang['country_na'];}
 
 geoip_close($gisp);
-
 geoip_close($giorg);
-
 geoip_close($gi);
 ?>
